@@ -1,0 +1,19 @@
+version: '3'
+services:
+  core_api:
+    build: .
+    container_name: 'wu-django'
+    command: tail -F anything #Maintains the image up no matter what
+    #ports:
+      #- "8000:8000"
+    volumes:
+      - ./:/usr/src/app
+
+  client:
+    build: ./client
+    container_name: 'wu-nodejs'
+    command: tail -F anything #Maintains the image up no matter what
+    #ports:
+      #- "8000:8000"
+    volumes:
+      - ./client:/usr/app

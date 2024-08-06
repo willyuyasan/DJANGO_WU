@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>TASK PAGE</h1>
+
+<ul>
+    {% for task in task_ls %}
+    <li>
+        <a href="{% url 'task_details' task.id %}">
+            {% if task.done %}
+                <strong>{{task.tittle}}</strong>
+            {% else %}
+                <h1>{{task.tittle}}</h1>
+            {% endif %}
+            <p>{{task.description}}</p>
+            <p>{{task.user.username}}</p>
+
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+python -m venv venv
+source venv/bin/activate
+deactivate
+
+
+docker compose up -d
+docker compose down 
+docker rmi $(docker images -a -q)
+
+#install django
+pip install django
+
+#Create a django project
+python -admin createproject myapp .
+
+#Start the django app
+python manage.py runserver
+
+#Create an application in django
+python manage.py startapp taskwu
+
+#Migrate the app config
+python manage.py migrate
+
+#Install django rest framework
+pip install djangorestframework
+pip install django-cors-headers
+
+#Install api documentation
+pip install coreapi
+
+#create a superuser 
+name:william pass:william
+
+
+

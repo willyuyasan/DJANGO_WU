@@ -1,0 +1,25 @@
+npm create vite
+project name: client
+cd client
+npm install 
+npm run dev
+
+#install libraries
+npm i react-router-dom
+npm i react-hot-toast
+npm i axios
+npm react-hook-form
+
+#install tailwind
+see: https://tailwindcss.com/docs/guides/vite
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+1) go to src-> App,jsx (modified) and npm run dev
+2) 
+
+
+
+
+    
